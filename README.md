@@ -73,7 +73,9 @@ Currently, Phasebook users find each other only by providing each other their pr
 - Example calls to the search endpoint are:
   - http://127.0.0.1:5000/search?id=1
   - http://127.0.0.1:5000/search?name=Ronalyn
-  - http://127.0.0.1:5000/search?id=5&name=Joe&age=25&occupation=Dev
+  - http://127.0.0.1:5000/search?occupation=Electrician
+  - http://127.0.0.1:5000/search?Age=46
+  -  http://127.0.0.1:5000/search?id=5&Age=46
 
 ### Search Specifications
 - All of the search parameters are optional. That means a user can pass no search parameter and the function should return all users. The user can also pass just the `id` as a parameter and it should just return the user with that `id`. The user can also pass multiple parameters and the function should return all the users that match **ANY** of the parameters provided.
