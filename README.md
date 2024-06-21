@@ -105,38 +105,36 @@ USERS = [
   ]
   ```
 
-- **Request:** http://127.0.0.1:5000/search?id=2&name=John
+- **Request:** http://127.0.0.1:5000/search?id=6&name=Rob
 
   **Result:**
   ```
   [
-    {"id": "1", "name": "John Doe", "age": 29, "occupation": "Developer"},
-    {"id": "2", "name": "Jane Doe", "age": 30, "occupation": "Engineer"},
-    {"id": "4", "name": "John Smith", "age": 28, "occupation": "Architect"}
+    {"id": "1", "name": "Robielyn", "age": 23, "occupation": "Engineer"},
+    {"id": "4", "name": "Robert", "age": 46, "occupation": "Electrician"},
+    {"id": "6", "name": "Harold", "age": 25, "occupation": "Designer"}
   ]
   ```
 
-- **Request:** http://127.0.0.1:5000/search?age=28
+- **Request:** http://127.0.0.1:5000/search?age=23
 
   **Result:**
   ```
   [
-    {"id": "1", "name": "John Doe", "age": 29, "occupation": "Developer"},
-    {"id": "4", "name": "John Smith", "age": 28, "occupation": "Architect"}
+    {"id": "1", "name": "Robielyn", "age": 23, "occupation": "Engineer"},
+    {"id": "2", "name": "Ronalyn", "age": 23, "occupation": "Sofware Engineer"}
   ]
   ```
 
-- **Request:** http://127.0.0.1:5000/search?id=5&name=Joe&age=30&occupation=Arc
+- **Request:** http://127.0.0.1:5000/search?id=5&name=ron&age=25&occupation=utility
 
   **Result:**
   ```
   [
-    {"id": "1", "name": "John Doe", "age": 29, "occupation": "Developer"},
-    {"id": "2", "name": "Jane Doe", "age": 30, "occupation": "Engineer"},
-    {"id": "3", "name": "Joe Doe", "age": 25, "occupation": "Designer"},
-    {"id": "4", "name": "John Smith", "age": 28, "occupation": "Architect"},
-    {"id": "5", "name": "Jane Smith", "age": 31, "occupation": "Manager"},
-    {"id": "6", "name": "Joe Smith", "age": 24, "occupation": "Designer"}
+    {"id": "2", "name": "Ronalyn", "age": 23, "occupation": "Sofware Engineer"},
+    {"id": "3", "name": "Rinalyn", "age": 47, "occupation": "Utility"},
+    {"id": "5", "name": "Lerma", "age": 45, "occupation": "Manager"},
+    {"id": "6", "name": "Harold", "age": 25, "occupation": "Designer"}
   ]
   ```
 
@@ -150,11 +148,11 @@ If you're someone who likes to go the extra mile, then this is for you! As an ex
 That means that with the examples above, the following request: http://127.0.0.1:5000/search?id=5&name=Joe&age=30&occupation=Arc, should return:
 ```
   [
-    {"id": "5", "name": "Jane Smith", "age": 31, "occupation": "Manager"},
-    {"id": "3", "name": "Joe Doe", "age": 25, "occupation": "Designer"},
-    {"id": "6", "name": "Joe Smith", "age": 24, "occupation": "Designer"},
-    {"id": "1", "name": "John Doe", "age": 29, "occupation": "Developer"},
-    {"id": "2", "name": "Jane Doe", "age": 30, "occupation": "Engineer"},
-    {"id": "4", "name": "John Smith", "age": 28, "occupation": "Architect"}
+    {"id": "1", "name": "Robielyn", "age": 23, "occupation": "Engineer"},
+    {"id": "2", "name": "Ronalyn", "age": 23, "occupation": "Sofware Engineer"},
+    {"id": "3", "name": "Rinalyn", "age": 47, "occupation": "Utility"},
+    {"id": "4", "name": "Robert", "age": 46, "occupation": "Electrician"},
+    {"id": "5", "name": "Lerma", "age": 45, "occupation": "Manager"},
+    {"id": "6", "name": "Harold", "age": 25, "occupation": "Designer"}
   ]
   ```
