@@ -55,7 +55,7 @@ Your task is to now optimize the matching algorithm so that users can find out i
 - The match endpoint is: http://127.0.0.1:5000/match/{match_id}.
 - Specifically, you need to optimize the `is_match` function under `phasebook/match.py`.
 - The function should return `True` when all numbers in `fave_numbers_2` can be found in `fave_numbers_1`. Otherwise, it should return `False`.
-- You can use the following `{match_id}` to test: `0`, `1`, `2`, `3`. Example: http://127.0.0.1:5000/match/3.
+- You can use the following `{match_id}` to test: `0`, `1`, `2`, `3`. Example: http://127.0.0.1:5000/match/2.
 
 ## Implement a Search Algorithm
 
@@ -72,7 +72,7 @@ Currently, Phasebook users find each other only by providing each other their pr
 - You can test the search functionality using the data in the `USERS` constant.
 - Example calls to the search endpoint are:
   - http://127.0.0.1:5000/search?id=1
-  - http://127.0.0.1:5000/search?name=Joe
+  - http://127.0.0.1:5000/search?name=Ronalyn
   - http://127.0.0.1:5000/search?id=5&name=Joe&age=25&occupation=Dev
 
 ### Search Specifications
