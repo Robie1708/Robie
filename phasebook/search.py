@@ -19,15 +19,18 @@ def search_users(args):
         a list of users that match the search parameters
     """
 
-    
+   
     search_id = args.get('id')
     search_name = args.get('name', '').lower()
-    search_age = args.get('Age')
+    search_age = args.get('age')
     search_occupation = args.get('occupation', '').lower()
 
-   
+  
     if search_age is not None:
-        search_age = int(search_age)
+        try:
+            search_age = int(search_age)
+        except ValueError:
+            return "Invalid age parameter. Age must be a valid integer.", 400
 
     matched_users = []
 
@@ -36,11 +39,11 @@ def search_users(args):
             matched_users.append(user)
             continue
 
-        if search_age is not None and search_age - 1 <= user['age'] <= search_age + 1:
+        if search_name and search_name in user['name'].lower():
             matched_users.append(user)
             continue
 
-        if search_name and search_name in user['name'].lower():
+        if search_age is not None and search_age - 1 <= user['age'] <= search_age + 1:
             matched_users.append(user)
             continue
 
