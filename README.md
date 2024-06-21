@@ -74,13 +74,13 @@ Currently, Phasebook users find each other only by providing each other their pr
   - http://127.0.0.1:5000/search?id=1
   - http://127.0.0.1:5000/search?name=Ronalyn
   - http://127.0.0.1:5000/search?occupation=Electrician
-  - http://127.0.0.1:5000/search?Age=46
+  - http://127.0.0.1:5000/search?Age=23
 
 ### Search Specifications
 - All of the search parameters are optional. That means a user can pass no search parameter and the function should return all users. The user can also pass just the `id` as a parameter and it should just return the user with that `id`. The user can also pass multiple parameters and the function should return all the users that match **ANY** of the parameters provided.
 - The `id` is unique. If the `id` is included in the search parameters, then immediately include the user with the passed `id`.
 - The `name` can be partially matched and is case insensitive. That means that if we have users with names John Doe, Jane Doe, and Joe Doe, passing the word "doe" to the `name` parameter should include all of them in the results.
-- The `age` parameter should include users that are in the range of `age - 1` to `age + 1`. This means that if we pass 26 to the `age` parameter, we should include users with ages 25 to 27.
+- The `age` parameter should include users that are in the range of `age - 1` to `age + 1`. This means that if we pass 24 to the `age` parameter, we should include users with ages 23 to 25.
 - The `occupation` parameter can be partially matched and is case insensitive. This means that if we pass "er" to the `occupation` parameter, we should include all users with an `occupation` that contains "er" in the results.
 - Do not include a user in the results more than once.
 
@@ -116,13 +116,14 @@ USERS = [
   ]
   ```
 
-- **Request:** http://127.0.0.1:5000/search?age=23
+- **Request:** http://127.0.0.1:5000/search?age=24
 
   **Result:**
   ```
   [
     {"id": "1", "name": "Robielyn", "age": 23, "occupation": "Engineer"},
-    {"id": "2", "name": "Ronalyn", "age": 23, "occupation": "Sofware Engineer"}
+    {"id": "2", "name": "Ronalyn", "age": 23, "occupation": "Sofware Engineer"},
+    {"id": "6", "name": "Harold", "age": 25, "occupation": "Designer"}
   ]
   ```
 
