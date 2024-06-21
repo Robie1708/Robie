@@ -146,7 +146,7 @@ If you're someone who likes to go the extra mile, then this is for you! As an ex
 - `age`
 - `occupation`
 
-That means that with the examples above, the following request: http://127.0.0.1:5000/search?id=5&name=Joe&age=30&occupation=Arc, should return:
+That means that with the examples above, the following request: http://127.0.0.1:5000/search?id=6&name=Lerma&age=47&occupation=Eng, should return:
 ```
   [
     {"id": "1", "name": "Robielyn", "age": 23, "occupation": "Engineer"},
