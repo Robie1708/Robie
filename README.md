@@ -75,7 +75,6 @@ Currently, Phasebook users find each other only by providing each other their pr
   - http://127.0.0.1:5000/search?name=Ronalyn
   - http://127.0.0.1:5000/search?occupation=Electrician
   - http://127.0.0.1:5000/search?Age=46
-  -  http://127.0.0.1:5000/search?id=5&Age=46
 
 ### Search Specifications
 - All of the search parameters are optional. That means a user can pass no search parameter and the function should return all users. The user can also pass just the `id` as a parameter and it should just return the user with that `id`. The user can also pass multiple parameters and the function should return all the users that match **ANY** of the parameters provided.
@@ -88,13 +87,13 @@ Currently, Phasebook users find each other only by providing each other their pr
 ### Examples
 Given the following users:
 ```
-[
-    {"id": "1", "name": "John Doe", "age": 29, "occupation": "Developer"},
-    {"id": "2", "name": "Jane Doe", "age": 30, "occupation": "Engineer"},
-    {"id": "3", "name": "Joe Doe", "age": 25, "occupation": "Designer"},
-    {"id": "4", "name": "John Smith", "age": 28, "occupation": "Architect"},
-    {"id": "5", "name": "Jane Smith", "age": 31, "occupation": "Manager"},
-    {"id": "6", "name": "Joe Smith", "age": 24, "occupation": "Designer"}
+USERS = [
+    {"id": "1", "name": "Robielyn", "age": 23, "occupation": "Engineer"},
+    {"id": "2", "name": "Ronalyn", "age": 23, "occupation": "Sofware Engineer"},
+    {"id": "3", "name": "Rinalyn", "age": 47, "occupation": "Utility"},
+    {"id": "4", "name": "Robert", "age": 46, "occupation": "Electrician"},
+    {"id": "5", "name": "Lerma", "age": 45, "occupation": "Manager"},
+    {"id": "6", "name": "Harold", "age": 25, "occupation": "Designer"},
 ]
 ```
 - **Request:** http://127.0.0.1:5000/search?id=1
@@ -102,7 +101,7 @@ Given the following users:
   **Result:**
   ```
   [
-    {"id": "1", "name": "John Doe", "age": 29, "occupation": "Developer"}
+    {"id": "1", "name": "Robielyn", "age": 23, "occupation": "Engineer"}
   ]
   ```
 
