@@ -41,7 +41,7 @@ Your first task is, of course, to set up the Phasebook repository on your local 
     ```
     flask --app phasebook --debug run
     ```
-7. Open the url printed on the terminal: `http://127.0.0.1:5000` using your browser or a tool like [Postman](https://www.postman.com). You should get a text saying `Hello World!`.
+7. Open the url printed on the terminal: `http://127.0.0.1:5000` using your browser or a tool like [Postman](https://www.postman.com). You should get a text saying `Hello World! Im Robie `.
 
 
 ## Improve the Matching Algorithm
